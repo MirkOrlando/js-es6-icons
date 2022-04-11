@@ -5,17 +5,14 @@ le stringhe del primo array in minuscolo e con l’iniziale maiuscola.
  */
 
 const ninjas = ["NARUTO", "nEJi", "inO", "JiraYa", "kakaSHI"];
-const readableNinjas = [];
-
-ninjas.forEach((ninja) => {
+const readableNinjas = ninjas.map((ninja) => {
   //console.log(ninja);
-  const toLowercaseNinjaArray = ninja.toLowerCase().split("");
-  const newZero = toLowercaseNinjaArray[0].toUpperCase();
-  toLowercaseNinjaArray.shift();
-  toLowercaseNinjaArray.unshift(newZero);
-  const readableNinja = toLowercaseNinjaArray.join("");
+  const toLowerCaseNinjaArray = ninja.toLowerCase().split("");
+  const newZero = toLowerCaseNinjaArray[0].toUpperCase();
+  toLowerCaseNinjaArray.shift();
+  toLowerCaseNinjaArray.unshift(newZero);
+  return (readableNinja = toLowerCaseNinjaArray.join(""));
   // console.log(readableNinja);
-  readableNinjas.push(readableNinja);
 });
 
 console.log(readableNinjas);
