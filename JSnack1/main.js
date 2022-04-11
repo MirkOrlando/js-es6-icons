@@ -81,7 +81,7 @@ const diesel = cars.filter((car) => {
   return car.powerSupply === "Diesel";
 });
 
-const all = cars.filter((car) => {
+const allOthers = cars.filter((car) => {
   return car.powerSupply !== "Benzina" && car.powerSupply !== "Diesel";
 });
 
@@ -89,4 +89,4 @@ const all = cars.filter((car) => {
 
 console.log(benzina);
 console.log(diesel);
-console.log(all);
+console.log(allOthers);
