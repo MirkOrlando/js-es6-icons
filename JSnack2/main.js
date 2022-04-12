@@ -15,4 +15,9 @@ const readableNinjas = ninjas.map((ninja) => {
   // console.log(readableNinja);
 });
 
+const colors = ["red", "yellow", "green", "blue", "orange", "grey"];
 console.log(readableNinjas);
+console.log(window);
+window.color = colors;
+
+console.log(window.colors);

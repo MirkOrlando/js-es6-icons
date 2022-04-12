@@ -5,7 +5,7 @@ marca, modello e alimentazione ("benzina", "diesel", "gpl", "elettrico", "metano
 Dividi le automobili in 3 array separati: 
 nel primo array solo le auto a "benzina", nel secondo solo le auto a "diesel", nel terzo il resto delle auto.
 Infine stampa separatamente i 3 array.
- */
+*/
 
 const cars = [
   {
@@ -86,7 +86,6 @@ const allOthers = cars.filter((car) => {
 });
 
 // stampare i 3 array
-
 console.log(benzina);
 console.log(diesel);
 console.log(allOthers);

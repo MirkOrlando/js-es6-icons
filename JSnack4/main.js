@@ -25,21 +25,21 @@ const people = [
   {
     name: "Giulio",
     surname: "Morettini",
-    age: 57,
+    age: 17,
   },
   {
     name: "Luca",
     surname: "Izzo",
-    age: 74,
+    age: 13,
   },
   {
     name: "Maria",
     surname: "Bonfanti",
-    age: 82,
+    age: 24,
   },
 ];
 
-const drivingLicense = people.map((person) => {
+/* const drivingLicense = people.map((person) => {
   if (person.age < 18) {
     return `${person.surname} ${person.name} non può richiedere la patente di guida, è minorenne`;
   } else if (person.age >= 18 && person.age < 50) {
@@ -55,5 +55,17 @@ const drivingLicense = people.map((person) => {
     // dopo gli 80 ogni 2 anni
     return `${person.surname} ${person.name} deve rinnovare la patente ogni 2 anni, in quanto over80`;
   }
+}); */
+//console.log(drivingLicense);
+
+const newPeople = people.map((person) => {
+  person.fullName = `${person.name} ${person.surname}`;
+  person.canDrive = false;
+  if (person.age >= 18) {
+    person.canDrive = true;
+  } else {
+    person.canDrive = false;
+  }
+  return person;
 });
-console.log(drivingLicense);
+console.log(newPeople);
